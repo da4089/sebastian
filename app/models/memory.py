@@ -23,34 +23,34 @@ class Memory(Element):
     class Speed(Enum):
         # Fast page DRAM (multiply by 10 to get access time in
         # nanoseconds).
-        FP_12,
-        FP_15,
-        FP_20,
+        FP_12 = 1,
+        FP_15 = 2,
+        FP_20 = 3,
 
         # SDRAM.
-        PC_66,
-        PC_100,
-        PC_133,
+        PC_66 = 4,
+        PC_100 = 5,
+        PC_133 = 6,
 
         # DDR-SDRAM.
-        DDR_200, # aka PC1600
-        DDR_266, # aka PC2100
-        DDR_300, # aka PC2400,
-        DDR_333, # aka PC2700,
-        DDR_400, # aka PC3200,
+        DDR_200 = 7, # aka PC1600
+        DDR_266 = 8, # aka PC2100
+        DDR_300 = 9, # aka PC2400,
+        DDR_333 = 10, # aka PC2700,
+        DDR_400 = 11, # aka PC3200,
 
         # DDR2-SDRAM.
-        DDR2_400, # aka PC2_3200
-        DDR2_533, # aka PC2_4200
-        DDR2_667, # aka PC2_5300
-        DDR2_800, # aka PC2_6400
-        DDR2_1066, # aka PC2_8500
+        DDR2_400 = 12, # aka PC2_3200
+        DDR2_533 = 13, # aka PC2_4200
+        DDR2_667 = 14, # aka PC2_5300
+        DDR2_800 = 15, # aka PC2_6400
+        DDR2_1066 = 16, # aka PC2_8500
 
         # DDR3-SDRAM.
-        DDR3_800, # aka PC3_6400
-        DDR3_1066, # aka PC3_8500
-        DDR3_1333, # aka PC3_10600
-        DDR3_1600, # aka PC3_12800
+        DDR3_800 = 17, # aka PC3_6400
+        DDR3_1066 = 18, # aka PC3_8500
+        DDR3_1333 = 19, # aka PC3_10600
+        DDR3_1600 = 20, # aka PC3_12800
         
     
     class FormFactor(Enum):
@@ -82,7 +82,7 @@ class Memory(Element):
 
 
     def __init__(self):
-        super(Element, self).__init__()
+        super(Memory, self).__init__()
 
         # Capacity of this memory element, in bytes
         self.capacity = 0
@@ -100,7 +100,7 @@ class Memory(Element):
         self.ecc = False
 
         # Buffering.
-        self.buffering = Buffering.UNBUFFERED
+        self.buffering = Memory.Buffering.UNBUFFERED
         return
 
 
