@@ -9,7 +9,6 @@ class Cable(Element):
 
         # Connectors.
         self.connectors = {}
-        return
 
         # Plenum-rated.
         self.plenum = False
@@ -59,11 +58,3 @@ class PowerCable(Cable):
         # Max voltage rating in volts.
         self.volts = 250
         return
-
-
-
-        
-
-        
-
-        
