@@ -58,6 +58,20 @@ Next steps
 Design Notes
 ============
 
+Locations
+---------
+- Maps show geography, and the location of facilities.
+  - Can we use Google Maps API?
+  - How do we get a more logical view?
+- Floorplans show interior geography, and the location of equipment.
+- Racks are shown on floorplans, and show equipment in their
+  elevations.
+- Devices can have sub-components.  It'd be nice to actually have a
+  sockets and plugs model to explicitly identify the expansion points
+  in a device (CPU sockets, memory sockets, expansion sockets,
+  external ports).
+
+
 Menu Structure
 --------------
 
@@ -67,6 +81,14 @@ Menu Structure
       like Apple's Spotlight that divides answers into categories?
   - Some basic statistics?
   - Recent activities list?
+
+  New
+  - Map
+  - Floorplan
+  - Rack
+  - Device
+  - Component
+  - Cable
 
   View
   - Locations
