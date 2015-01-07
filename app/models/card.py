@@ -10,33 +10,33 @@ class ExpansionCard(Element):
     class Connector(Enum):
         """Physical connector for card to motherboard or chassis."""
 
-        ISA,
-        EISA,
-        VLB,
-        PCI,
-        PCI_X,
-        PCIe_x1,
-        PCIe_x4,
-        PCIe_x8,
-        PCIe_x16,
-        HTX,
+        ISA = 1,
+        EISA = 2,
+        VLB = 3,
+        PCI = 4,
+        PCI_X = 5,
+        PCIe_x1 = 6,
+        PCIe_x4 = 7,
+        PCIe_x8 = 8,
+        PCIe_x16 = 9,
+        HTX = 10,
 
     class Speed(Enum):
         """Main bus connection speed, if applicable."""
 
-        PCI_33,
-        PCI_66,
-        PCI_X_100,
-        PCI_X_133,
+        PCI_33 = 1,
+        PCI_66 = 2,
+        PCI_X_100 = 3,
+        PCI_X_133 = 4,
 
-        PCIe_1,
-        PCIe_2,
-        PCIe_3,
+        PCIe_1 = 5,
+        PCIe_2 = 6,
+        PCIe_3 = 7,
 
         
     def __init__(self):
         """Constructor."""
-        Element.__init__(self)
+        super(ExpansionCard, self).__init__()
 
         # Connector.
         self.connector = None
