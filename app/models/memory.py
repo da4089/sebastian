@@ -67,6 +67,20 @@ class Memory(Element):
         SODIMM260 = 10,
 
 
+    class Buffering(Enum):
+        # Normal (cheap) RAM (UDIMM).
+        UNBUFFERED = 0,
+
+        # Registered (RDIMM).
+        REGISTERED = 1,
+
+        # Fully-buffered (FB-DIMM).
+        FULLY_BUFFERED = 2,
+
+        # Load-reduced (LRDIMM).
+        LOAD_REDUCED = 3,
+
+
     def __init__(self):
         super(Element, self).__init__()
 
@@ -74,16 +88,19 @@ class Memory(Element):
         self.capacity = 0
 
         # Type of memory.
-        self.type = 0
+        self.type = None
 
         # Speed of memory, in MHz
-        self.speed = 0
+        self.speed = None
 
         # Form-factor for this memory (eg. DDR3, etc)
         self.form_factor = ""
 
         # Error correction.
         self.ecc = False
+
+        # Buffering.
+        self.buffering = Buffering.UNBUFFERED
         return
 
 
