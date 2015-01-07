@@ -5,7 +5,7 @@ from element import Element
 
 class PatchJack(Element):
     def __init__(self):
-        super(Element, self).__init__()
+        super(PatchJack, self).__init__()
 
         # External connector type.
         self.external_connector = 0
@@ -17,7 +17,7 @@ class PatchJack(Element):
         
 class PatchPanel(Element):
     def __init__(self):
-        super(Element, self).__init__()
+        super(PatchPanel, self).__init__()
 
         # Number of jacks.
         self.count = 0
@@ -29,7 +29,7 @@ class PatchPanel(Element):
 
 class RackPatchPanel(PatchPanel):
     def __init__(self):
-        super(PatchPanel, self).__init__()
+        super(RackPatchPanel, self).__init__()
 
         # Size in rack units.
         self.size = 1
@@ -41,5 +41,5 @@ class RackPatchPanel(PatchPanel):
 
 class WallJackPanel(PatchPanel):
     def __init__(self):
-        super(PatchPanel, self).__init__()
+        super(WallJackPanel, self).__init__()
         return

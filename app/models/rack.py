@@ -10,7 +10,7 @@ from element import Element
 
 class Rack(Element):
     def __init__(self):
-        super(Element, self).__init__()
+        super(Rack, self).__init__()
 
         # Height in rack units.
         self.height = 0
@@ -35,7 +35,7 @@ class Rack(Element):
 
 class RackShelf(Element):
     def __init__(self):
-        super(Element, self).__init__()
+        super(RackShelf, self).__init__()
 
         # Height in rack units
         self.height = 0
@@ -50,7 +50,7 @@ class RackShelf(Element):
 
 class BlankingPlate(Element):
     def __init__(self):
-        super(Element, self).__init__()
+        super(BlankingPlate, self).__init__()
 
         # Height in rack units.
         self.height = 0
@@ -61,7 +61,7 @@ class BlankingPlate(Element):
 
 class HorizontalCableManagement(Element):
     def __init__(self):
-        super(Element, self).__init__()
+        super(HorizontalCableManagement, self).__init__()
 
         # Height in rack units.
         self.height = 0
@@ -72,3 +72,4 @@ class HorizontalCableManagement(Element):
         # forward extent of the rings/shelf/whatever.  ie. Will the
         # damned door close?
         self.depth = None
+        return
