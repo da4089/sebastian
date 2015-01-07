@@ -6,7 +6,7 @@ from element import Element
 
 class CPU(Element):
     def __init__(self):
-        super(Element, self).__init__()
+        super(CPU, self).__init__()
 
         # Default speed in MHz
         self.speed = 0
