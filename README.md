@@ -11,6 +11,8 @@ can be used to/for
 - Draw rack elevations
 - Draw floor plans
 - Maintain a patch schedule
+- Maintain a circuit inventory
+- Maintain a cross-connect inventory
 - Draw a network diagram
 - SDN provisioning
 - OpenStack/AWS provisioning
